@@ -54,7 +54,7 @@ pub struct StatsReport {
 }
 
 #[pymodule]
-fn mlguardian_rust(_py: Python, m: &PyModule) -> PyResult<()> {
+fn modelautopsy_rust(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(rust_has_failure, m)?)?;
     m.add_function(wrap_pyfunction!(rust_analyze, m)?)?;
     m.add_class::<StatsReport>()?;

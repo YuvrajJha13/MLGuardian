@@ -1,28 +1,18 @@
-# MLGuardian
+# ModelAutopsy
 
-MLGuardian is a high-performance Machine Learning debugging library written in C++ and wrapped in Python. It utilizes OpenMP to perform multi-threaded analysis of gradient tensors, instantly detecting NaN, Infinity, Vanishing, and Exploding values in massive datasets.
+ModelAutopsy is a high-performance, hybrid-engine (Rust/C++) Machine Learning debugging library. It utilizes advanced parallelism to perform multi-threaded analysis of gradient tensors, instantly detecting NaN, Infinity, Vanishing, and Exploding values in massive datasets.
 
 ## Features
 
-*   **Lightning Fast:** Analyzes 1M parameters in milliseconds using C++ OpenMP.
-*   **Reliable:** Detects NaN (Not a Number) and Infinity corruption instantly.
-*   **Developer Friendly:** Returns standard Python Dictionaries for easy integration.
-*   **Visual:** Includes visualization tools to track training health over time.
+*   **🛡 Hybrid Engine:** Rust (Safety) + C++ (Speed).
+*   **🔍 Deep Analysis:** Instantly detects NaN, Inf, Vanishing, and Exploding values.
+*   **📊 Advanced Metrics:** Calculates L2 Norm, Variance, Mean, Min/Max for statistical health.
+*   **🎨 IDE Integration:** Includes Rich Console UI and Python Decorators for real-time training loops.
+*   **🚀 Zero-Copy:** Direct memory access for maximum performance on large tensors.
 
-## Installation Prerequisites
+## Installation
 
-*   C++ Compiler (GCC/Clang) with OpenMP support.
-*   Python 3.8+
-*   NumPy
-
-## Build from Source
+### Pip Install (Recommended)
 
 ```bash
-git clone https://github.com/YuvrajJha13/MLGuardian.git
-cd MLGuardian
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Build the C++ extension
-python setup.py build_ext --inplace
+pip install modelautopsy

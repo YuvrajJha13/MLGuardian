@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-import mlguardian
+import modelautopsy
 
 NUM_EPOCHS = 100
 TENSOR_SIZE = 1_000_000
@@ -38,7 +38,7 @@ for epoch in range(NUM_EPOCHS):
     else:
         current_gradients *= 0.99
 
-    report = mlguardian.analyze(current_gradients)
+    report = modelautopsy.analyze(current_gradients)
     epochs.append(epoch)
     
     is_failure = (report["nan_count"] > 0) or (report["inf_count"] > 0)

@@ -4,21 +4,21 @@ import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-import mlguardian
+import modelautopsy
 from debugger import watch, _prepare_tensor
 
 class TestCoreEngine:
     def test_empty_tensor(self):
         """Should handle size 0 without crash."""
         data = np.array([], dtype=np.float32)
-        report = mlguardian.analyze(data)
+        report = modelautopsy.analyze(data)
         assert report["nan_count"] == 0
         assert report["mean"] == 0.0
 
     def test_all_nans(self):
         """Pure NaN stress test."""
         data = np.full(100, np.nan, dtype=np.float32)
-        report = mlguardian.analyze(data)
+        report = modelautopsy.analyze(data)
         assert report["nan_count"] == 100
         assert report["valid_count"] == 0
         assert report["mean"] == 0.0
