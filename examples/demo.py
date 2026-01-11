@@ -7,11 +7,9 @@ import matplotlib.pyplot as plt
 import time
 import mlguardian
 
-# --- Configuration ---
 NUM_EPOCHS = 100
 TENSOR_SIZE = 1_000_000
 
-# Set a simple style (no seaborn dependency)
 plt.style.use('ggplot')
 
 print("--- ML Guardian Visualization (Matplotlib Only) ---")

@@ -3,3 +3,5 @@ matplotlib
 seaborn
 pybind11
 setuptools
+rich
+pytest
