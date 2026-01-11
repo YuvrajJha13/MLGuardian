@@ -115,7 +115,6 @@ def watch(drop_into_debugger=False, verbose=True, inspect_args=True, inspect_ret
     return decorator
 
 def _log_error(func, source, report):
-    """Logs the error with a rich table."""
     console.print(f"\n[bold red]⚠️  FAILURE DETECTED[/bold red]")
     t = Table(show_header=False, header_style="bold magenta")
     t.add_row("[dim]Function:[/dim]", f"[bold]{func}[/bold]")
@@ -124,4 +123,6 @@ def _log_error(func, source, report):
     t.add_row("[dim]Inf Count:[/dim]", f"[red]{report['inf_count']}[/red]")
     if report['nan_count'] == 0:
         t.add_row("[dim]Mean:[/dim]", f"{report['mean']:.4e}")
+        t.add_row("[dim]L2 Norm:[/dim]", f"{report['l2_norm']:.4e}") # NEW
+        t.add_row("[dim]Variance:[/dim]", f"{report['variance']:.4e}") # NEW
     console.print(t)
