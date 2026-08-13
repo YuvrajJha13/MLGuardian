@@ -25,7 +25,7 @@
 *Recommended for most users. Includes the high-performance C++ engine.*
 
 ```bash
-pip install .
+pip install modelautopsy
 ```
 
 ### Option 2: Full Hybrid Installation (Rust + C++ + Python)
