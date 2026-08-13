@@ -1,22 +1,49 @@
-# Compiled Python C++ Extensions
-*.so
-*.pyd
-*.dylib
+```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+*.o
+*.obj
 
-# Python Build Folders
-build/
-dist/
+# Dependencies
+.venv/
+venv/
+node_modules/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+*.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# Coverage reports
+.coverage
+coverage/
+htmlcov/
+
+# Python specific
+*.py[cod]
+*$py.class
+*.so
+.Python
 *.egg-info/
 .eggs/
 
-# Virtual Environment
-venv/
-ENV/
+# Test related
+.pytest_cache/
+.mypy_cache/
+.hypothesis/
 
-# Rust Build Artifacts (We upload CODE, not BINARIES)
-rust/target/
-rust/Cargo.lock
-
-# IDEs
-.vscode/
-.idea/
+# Distribution artifacts
+dist/
+build/
+*.egg
+```
